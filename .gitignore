@@ -1,0 +1,15 @@
+.DS_Store
+node_modules
+.pnpm-store
+.turbo
+*.log
+dist
+dist-ssr
+*.local
+.env*
+!.env.example
+.cache
+*.tsbuildinfo
+coverage
+.rollup.cache
+prisma-client

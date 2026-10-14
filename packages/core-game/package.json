@@ -1,0 +1,41 @@
+{
+  "name": "@repo/core-game",
+  "version": "0.0.6",
+  "author": "Andrew Steinheiser <me@iamandrew.io>",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "postinstall": "pnpm build",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "test": "vitest",
+    "test:watch": "vitest --watch --coverage",
+    "check-types": "tsc --noEmit",
+    "dev": "vite build --watch --emptyOutDir=false",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@colyseus/schema": "catalog:",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "tslib": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-plugin-dts": "catalog:",
+    "vitest": "catalog:",
+    "zod": "catalog:"
+  },
+  "peerDependencies": {
+    "@colyseus/schema": "catalog:",
+    "zod": "catalog:"
+  }
+}
